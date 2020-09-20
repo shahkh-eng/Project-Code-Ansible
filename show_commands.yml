@@ -1,0 +1,38 @@
+---
+
+  - name: Play . Show Output on IOS Routers
+    hosts: all
+    connection: local
+    gather_facts: no
+
+    tasks:
+      - name: Collect Facts on Router via Ansible Facts Module
+        ios_facts:
+          provider:
+            username: gnslab
+            password: cisco
+
+      - name: Ansible Router OS Version
+        debug:
+          var: ansible_net_version
+
+      - name: Ansible Router Hostname
+        debug:
+          var: ansible_net_hostname
+
+      - name: Run Show Interface Brief Command
+        ios_command:
+          commands:
+            - show ip interface brief
+          provider:
+            username: gnslab
+            password: cisco
+        register: show_data
+
+      - name: Save the Command output in a Variable
+        set_fact:
+          interface_ids: "{{ show_data.stdout[0] }}"
+      - name: Show Output
+        debug:
+          var: interface_ids
+

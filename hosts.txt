@@ -1,0 +1,10 @@
+[core]
+R1 ansible_host=192.168.122.11
+R2 ansible_host=192.168.122.22
+
+[distribution]
+R3 ansible_host=192.168.122.33
+R4 ansible_host=192.168.122.44
+
+[access]
+R5 ansible_host=192.168.122.3
