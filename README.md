@@ -5,7 +5,7 @@ You can check my article on Linkedin for details on how to set up GNS lab and us
 Note: Please note that below scripts/libraries or configurations are for learning purposes only, do not use them in production environment.
 
 Introduction:
-    Ansible is an open source automation tool, it uses a decentralized, agent less architecture (does not need to install an agent on the managed node). It manages different nodes via SSH transport protocol. Ansible is build using Python. There are different versions of Ansible available please check the official website for more information link. Ansible core is an open source platform however Ansible has a commercial offering Ansible Tower with enterprise features e.g. RESTful API to execute Ansible playbooks etc.
+    Ansible is an open source automation tool, it uses a decentralized, agent less architecture (does not need to an agent on the managed node). It manages different nodes via SSH transport protocol. Ansible is build using Python. There are different versions of Ansible available please check the official website for more information link. Ansible core is an open source platform however Ansible has a commercial offering Ansible Tower with enterprise features e.g. RESTful API to execute Ansible playbooks etc.
 
 Ansible uses control machine that can be our laptop, desktop or server. The control machine uses Ansible to distribute the configuration changes through SSH to the managed nodes (in our case a Network Router/Switch). Ansible is idempotent (means that if a task has already been done and the playbook is re-launched, it will not change anything since the task has already been executed).
 Ansible Components:
@@ -57,6 +57,22 @@ Configuration Steps:
     (config-line)#exit
     
 5.Try to ping and SSH the R2-f2/0 ip addresses from Network Automation appliance command line (Should work if above steps are correct).
+
+Ansible Workflow:
+
+        1.Playbooks are created in YAML language to describe the workflow.
+
+        2.Playbooks are deployed to an Ansible control machine.
+
+        3.Control machine runs the playbook, the modules (Python Code) are copied to the remote hosts.
+
+        4.Finally Ansible runs those modules (python code to automate the tasks) on the remote device in case of Linux servers (Cisco IOS-XR also support this model) but with networking devices e.g. routers/switches etc the python script is run locally on the control machine and only the CLI commands are sent from the control machine to the managed device over SSH.
+
+To execute the playbook:
+
+        $ ansible-playbook -i (inventory) (file name).yml
+
+We can install Ansible on Linux distributions e.g. Fedora, Red Hat Enterprise Linux, and CentOS operating systems in package form. Can install on Ubuntu and debian based distributions using the official package. Check the installation documentation, But as we are working on “Network Automation Appliance”, it’s already installed. We will use 5 Cisco (IOS) Routers inside GNS3 environment to get started at a very basic level, you can built on it step by step.
 
 Related Links:
 
