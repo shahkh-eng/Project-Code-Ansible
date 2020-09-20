@@ -8,6 +8,9 @@ Introduction:
     Ansible is an open source automation tool, it uses a decentralized, agent less architecture (does not need to an agent on the managed node). It manages different nodes via SSH transport protocol. Ansible is build using Python. There are different versions of Ansible available please check the official website for more information link. Ansible core is an open source platform however Ansible has a commercial offering Ansible Tower with enterprise features e.g. RESTful API to execute Ansible playbooks etc.
 
 Ansible uses control machine that can be our laptop, desktop or server. The control machine uses Ansible to distribute the configuration changes through SSH to the managed nodes (in our case a Network Router/Switch). Ansible is idempotent (means that if a task has already been done and the playbook is re-launched, it will not change anything since the task has already been executed).
+
+We can install Ansible on Linux distributions e.g. Fedora, Red Hat Enterprise Linux, and CentOS operating systems in package form. Can install on Ubuntu and debian based distributions using the official package. Check the installation documentation, But as we are working on “Network Automation Appliance”, it’s already installed. We will use 5 Cisco (IOS) Routers inside GNS3 environment to get started at a very basic level, you can built on it step by step.
+
 Ansible Components:
 
     Modules: Ansible modules are written in Python language they are referenced as tasks inside Ansible Playbook or inside Ansible ad-hoc cli tool using cli arguments.
@@ -71,8 +74,6 @@ Ansible Workflow:
 To execute the playbook:
 
         $ ansible-playbook -i (inventory) (file name).yml
-
-We can install Ansible on Linux distributions e.g. Fedora, Red Hat Enterprise Linux, and CentOS operating systems in package form. Can install on Ubuntu and debian based distributions using the official package. Check the installation documentation, But as we are working on “Network Automation Appliance”, it’s already installed. We will use 5 Cisco (IOS) Routers inside GNS3 environment to get started at a very basic level, you can built on it step by step.
 
 Related Links:
 
