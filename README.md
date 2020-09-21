@@ -23,13 +23,64 @@ Ansible Components:
 
 Installation:
 
-Prerequisites
+        Step 1: Install GNS3 GUI:
 
-    1.GNS3 GUI & GNS3 VM installed and integrated “Please check my previous post regarding these steps”.
+        ·        Check the GNS3 installation Requirements first
 
-    2.“Network Automation” appliance by GNS3 (It contains Tools like Python 2&3, Netmiko, NAPALM, pyntc and Ansible pre installed), Download link. Please check caveats and specific requirement for your lab setup before trying to use them.
+        ·        Go to link https://www.gns3.com/
 
-    3.Cisco “IOS” image for Cisco emulated devices.
+        ·        Click on "Free Download Button" [Login Page will pop up, Need to login/register if not done before] It’s free.
+
+        ·        Clink on Download GNS3 for Windows
+
+        ·        Install the "All-In-One" file and keep the options to default
+
+          *If you download solarwinds, you will be asked to install “.NET Framework” as well.
+
+        ·        Continue to Setup Wizard
+
+
+
+        Step 2: Install VMware Workstation Pro/VMware Player
+
+        ·        Go to https://www.vmware.com/products/workstation-player/workstation-player-evaluation.html and download the free "VMware workstation player".
+
+        ·        Install the player with default settings
+
+                  *VMware Player requires the installation of additional free software "VMware VIX" to work.
+
+        ·        Go to https://www.gns3.com and click on "Download GNS3 VM"
+
+        ·        Clink on Download button under "VMWARE workstation and Fusion" option
+
+        ·        Extract the file
+
+        ·        Check the computer/Laptop requirements for GNS3 VM
+
+                  *Make sure that CPU is capable of hardware virtualization and it’s enabled in system's BIOS
+
+        ·        Open VMware Player click on >File > Open navigate and select the GNS3 VM.
+
+        ·        Keep the settings to Default.
+
+
+
+        Step 3: Integration of GNS3 GUI with GNS3 VM
+
+        ·        Go to GNS3 GUI and click
+
+        - GNS3 VM
+
+          -  Enable GNS3 VM
+
+          - Virtualization Engine
+
+        -         Select VMware Player
+
+          -  Click Refresh button to display VM name if not shown
+
+2.“Network Automation” appliance by GNS3 (It contains Tools like Python 2&3, Netmiko, NAPALM, pyntc and Ansible pre installed), Download link. Please check caveats and specific requirement for your lab setup before trying to use them. Download link https://www.gns3.com/marketplace/appliances/network-automation
+3.Cisco “IOS” image for Cisco emulated devices.
 
 Configuration Steps:
 
@@ -42,7 +93,6 @@ Configuration Steps:
       ·R2(config-if)#ip address 192.168.122.22 255.255.255.0
 
       ·R2(config-if)#no shutdown
-
 4.You have to configure R2 for SSHv2
 
     For Example:
