@@ -4,6 +4,8 @@ You can check my article on Linkedin for details on how to set up GNS lab and us
 
 Note: Please note that below scripts/libraries or configurations are for learning purposes only, do not use them in production environment.
 
+LICENSE: GPLv3
+
 Introduction:
     Ansible is an open source automation tool, it uses a decentralized, agent less architecture (does not need to an agent on the managed node). It manages different nodes via SSH transport protocol. Ansible is build using Python. There are different versions of Ansible available please check the official website for more information link. Ansible core is an open source platform however Ansible has a commercial offering Ansible Tower with enterprise features e.g. RESTful API to execute Ansible playbooks etc.
 
@@ -127,12 +129,11 @@ To execute the playbook:
 
 Related Links:
 
-
-    https://www.youtube.com/channel/UCP7WmQ_U4GB3K51Od9QvM0w
-    Book “Python network programming conquer all your networking challenges with the powerful python language” by Abhishek Ratan, Eric Chou, Pradeeban Kathiravelu.
-    https://docs.ansible.com
-    https://docs.ansible.com/ansible/2.7/user_guide/playbooks_best_practices.html
-    https://www.rogerperkin.co.uk/network-automation/what-does-a-network-automation-engineer-do/
-    Book “Network Programmability and Automation: Skills for the Next-Generation Network Engineer” by Jason Edelman, Scott S. Lowe and Matt Oswalt
+https://www.youtube.com/channel/UCP7WmQ_U4GB3K51Od9QvM0w
+Book “Python network programming conquer all your networking challenges with the powerful python language” by Abhishek Ratan, Eric Chou, Pradeeban Kathiravelu.
+https://docs.ansible.com
+https://docs.ansible.com/ansible/2.7/user_guide/playbooks_best_practices.html
+https://www.rogerperkin.co.uk/network-automation/what-does-a-network-automation-engineer-do/
+Book “Network Programmability and Automation: Skills for the Next-Generation Network Engineer” by Jason Edelman, Scott S. Lowe and Matt Oswalt
 
 
