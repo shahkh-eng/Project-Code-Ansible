@@ -58,3 +58,34 @@ We will use 5 Cisco (IOS) routers inside a GNS3 environment to get started at a 
    R2(config)# interface fastEthernet 2/0
    R2(config-if)# ip address 192.168.122.22 255.255.255.0
    R2(config-if)# no shutdown
+
+1: Configure SSHv2 on your Cisco IOS routers (example for R2):
+
+   R2(config)# hostname R2
+   R2(config)# ip domain-name python.com
+   R2(config)# crypto key generate rsa modulus 1024
+   R2(config)# enable password cisco
+   R2(config)# username gnslab password cisco
+   R2(config)# username gnslab privilege 15
+   R2(config)# ip scp server enable
+   R2(config)# line vty 0 4
+   R2(config-line)# login local
+   R2(config-line)# transport input ssh
+   R2(config-line)# exit
+
+2: Verify connectivity by attempting to ping and SSH into the router IP addresses from the Network Automation appliance command line.
+
+## Ansible Workflow & Execution
+   1: Playbooks are created in YAML format to describe automation workflows.
+   2: Playbooks are deployed to your Ansible control machine.
+   3: For network devices (routers and switches), the Python script runs locally on the control machine, transmitting CLI commands over SSH to the managed device.
+## To Execute the Playbook:
+Run the playbook from your control terminal specifying your inventory file:
+      ansible-playbook -i hosts.txt show_commands.yml
+## Related Links & References
+   1: YouTube Channel: Network Automation Channel
+   2: Book: "Python Network Programming" by Abhishek Ratan, Eric Chou, and Pradeeban Kathiravelu.
+   3: Book: "Network Programmability and Automation: Skills for the Next-Generation Network Engineer" by Jason Edelman, Scott S. Lowe, and Matt Oswalt.
+   4: Official Documentation: Ansible Documentation
+   5: Best Practices: Ansible Playbook Best Practices
+   6: Blog: Roger Perkin Network Automation
