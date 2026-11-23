@@ -79,13 +79,15 @@ We will use 5 Cisco (IOS) routers inside a GNS3 environment to get started at a 
    1: Playbooks are created in YAML format to describe automation workflows.
    2: Playbooks are deployed to your Ansible control machine.
    3: For network devices (routers and switches), the Python script runs locally on the control machine, transmitting CLI commands over SSH to the managed device.
+
 ## To Execute the Playbook:
 Run the playbook from your control terminal specifying your inventory file:
       ansible-playbook -i hosts.txt show_commands.yml
+
 ## Related Links & References
-   1: YouTube Channel: Network Automation Channel
-   2: Book: "Python Network Programming" by Abhishek Ratan, Eric Chou, and Pradeeban Kathiravelu.
-   3: Book: "Network Programmability and Automation: Skills for the Next-Generation Network Engineer" by Jason Edelman, Scott S. Lowe, and Matt Oswalt.
-   4: Official Documentation: Ansible Documentation
-   5: Best Practices: Ansible Playbook Best Practices
-   6: Blog: Roger Perkin Network Automation
+- **YouTube Channel:** [Network Automation Channel](https://www.youtube.com/channel/UCP7WmQ_U4GB3K51Od9QvM0w)
+- **Book:** *"Python Network Programming"* by Abhishek Ratan, Eric Chou, and Pradeeban Kathiravelu.
+- **Book:** *"Network Programmability and Automation: Skills for the Next-Generation Network Engineer"* by Jason Edelman, Scott S. Lowe, and Matt Oswalt.
+- **Official Documentation:** [Ansible Documentation](https://docs.ansible.com)
+- **Best Practices:** [Ansible Playbook Best Practices](https://docs.ansible.com/ansible/latest/user_guide/playbooks_best_practices.html)
+- **Blog:** [Roger Perkin Network Automation](https://www.rogerperkin.co.uk/network-automation/what-does-a-network-automation-engineer-do/)
