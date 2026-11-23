@@ -58,7 +58,7 @@ We will use 5 Cisco (IOS) routers inside a GNS3 environment to get started at a 
    R2(config)# interface fastEthernet 2/0
    R2(config-if)# ip address 192.168.122.22 255.255.255.0
    R2(config-if)# no shutdown
-
+   ```
 1: Configure SSHv2 on your Cisco IOS routers (example for **R2**):
    ```cisco
    R2(config)# hostname R2
@@ -72,7 +72,7 @@ We will use 5 Cisco (IOS) routers inside a GNS3 environment to get started at a 
    R2(config-line)# login local
    R2(config-line)# transport input ssh
    R2(config-line)# exit
-
+   ```
 2: Verify connectivity by attempting to ping and SSH into the router IP addresses from the Network Automation appliance command line.
 
 ## Ansible Workflow & Execution
