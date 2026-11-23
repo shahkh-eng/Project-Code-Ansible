@@ -59,8 +59,9 @@ We will use 5 Cisco (IOS) routers inside a GNS3 environment to get started at a 
    R2(config-if)# ip address 192.168.122.22 255.255.255.0
    R2(config-if)# no shutdown
 
-1: Configure SSHv2 on your Cisco IOS routers (example for R2):
+Configure SSHv2 on your Cisco IOS routers (example for **R2**):
 
+   ```cisco
    R2(config)# hostname R2
    R2(config)# ip domain-name python.com
    R2(config)# crypto key generate rsa modulus 1024
@@ -76,9 +77,10 @@ We will use 5 Cisco (IOS) routers inside a GNS3 environment to get started at a 
 2: Verify connectivity by attempting to ping and SSH into the router IP addresses from the Network Automation appliance command line.
 
 ## Ansible Workflow & Execution
-   1: Playbooks are created in YAML format to describe automation workflows.
-   2: Playbooks are deployed to your Ansible control machine.
-   3: For network devices (routers and switches), the Python script runs locally on the control machine, transmitting CLI commands over SSH to the managed device.
+
+- Playbooks are created in YAML format to describe automation workflows.
+- Playbooks are deployed to your Ansible control machine.
+- For network devices (routers and switches), the Python script runs locally on the control machine, transmitting CLI commands over SSH to the managed device.
 
 ## To Execute the Playbook:
 Run the playbook from your control terminal specifying your inventory file:
