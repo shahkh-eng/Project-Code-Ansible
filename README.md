@@ -59,9 +59,8 @@ We will use 5 Cisco (IOS) routers inside a GNS3 environment to get started at a 
    R2(config-if)# ip address 192.168.122.22 255.255.255.0
    R2(config-if)# no shutdown
 
-Configure SSHv2 on your Cisco IOS routers (example for **R2**):
+1: Configure SSHv2 on your Cisco IOS routers (example for **R2**):
 
-   ```cisco
    R2(config)# hostname R2
    R2(config)# ip domain-name python.com
    R2(config)# crypto key generate rsa modulus 1024
